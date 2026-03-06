@@ -137,7 +137,7 @@ services:
       POSTGRES_DB: bgp_dns_db
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: admin123
-    command: python bgp_processor.py
+    command: bash /app/entrypoint.sh
 
   # ── 7. POSTGRESQL ─────────────────────────────────────────────────────────
   # Persistent sink for all processed data.

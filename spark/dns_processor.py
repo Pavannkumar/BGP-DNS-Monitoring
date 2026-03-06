@@ -241,13 +241,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-```
-
----
-
-### Your `spark/` Folder Should Now Look Like This
-```
-spark/
-├── bgp_processor.py
-├── dns_processor.py
-└── Dockerfile
