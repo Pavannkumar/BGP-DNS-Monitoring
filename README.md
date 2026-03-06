@@ -33,58 +33,6 @@ Five microservices, fully containerised via Docker Compose:
 
 ---
 
-## Prerequisites
-
-- Docker Desktop (8GB RAM allocated recommended)
-- Git
-
----
-
-## Quickstart
-```bash
-git clone https://github.com/Pavannkumar/BGP-DNS-Monitoring.git
-cd bgp-dns-monitoring
-docker compose up -d
-```
-
-Wait ~30 seconds for all services to become healthy, then open Grafana:
-
-- URL: http://localhost:3000
-- Username: `admin`
-- Password: `admin`
-
-Navigate to **Dashboards ? BGP/DNS Route Monitoring** to see live data.
-
----
-
-## Verify Pipeline
-
-Check all 8 services are running:
-```bash
-docker compose ps
-```
-
-Check Spark is processing:
-```bash
-docker logs spark --tail 30
-```
-
-You should see `Wrote batch X to routing_events` and `[DNS-PROCESSOR] Wrote X rows to dns_events`.
-
----
-
-## Stop the Pipeline
-```bash
-docker compose down
-```
-
-To also remove all stored data:
-```bash
-docker compose down -v
-```
-
----
-
 ## Project Structure
 ```
 bgp-dns-monitoring/
