@@ -23,6 +23,13 @@ Five microservices, fully containerised via Docker Compose:
 | Dashboard | Grafana 10.2 | Real-time visualisation |
 
 ---
+- URL: http://localhost:3000
+- Username: `admin`
+- Password: `admin123`
+
+Navigate to **Dashboards → BGP/DNS Route Monitoring** to see live data.
+
+---
 
 ## Anomaly Detection
 
