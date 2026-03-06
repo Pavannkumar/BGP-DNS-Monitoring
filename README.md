@@ -2,7 +2,6 @@
 
 A real-time data engineering pipeline that monitors BGP routing events and DNS traffic to detect network anomalies such as route hijacks, DNS tunneling, and NXDOMAIN storms.
 
-Built as part of the IU Internationale Hochschule MSc Computer Science — Data Engineering course (DLMDSEDE02).
 
 ---
 
@@ -27,10 +26,10 @@ Five microservices, fully containerised via Docker Compose:
 
 ## Anomaly Detection
 
-- **BGP Route Flap** — HIGH alert when a prefix changes route more than 5 times in a 60-second window
-- **BGP Hijack** — CRITICAL alert when an unknown AS originates a known prefix
-- **DNS Tunneling** — CRITICAL alert when a source IP generates excessive DNS queries
-- **NXDOMAIN Storm** — HIGH alert when NXDOMAIN response rate spikes
+- **BGP Route Flap** â€” HIGH alert when a prefix changes route more than 5 times in a 60-second window
+- **BGP Hijack** â€” CRITICAL alert when an unknown AS originates a known prefix
+- **DNS Tunneling** â€” CRITICAL alert when a source IP generates excessive DNS queries
+- **NXDOMAIN Storm** â€” HIGH alert when NXDOMAIN response rate spikes
 
 ---
 
@@ -91,15 +90,15 @@ docker compose down -v
 bgp-dns-monitoring/
 +-- docker-compose.yml        # Full infrastructure definition (IaC)
 +-- producers/
-¦   +-- bgp_producer.py       # BGP event simulator
-¦   +-- dns_producer.py       # DNS event simulator
+Â¦   +-- bgp_producer.py       # BGP event simulator
+Â¦   +-- dns_producer.py       # DNS event simulator
 +-- spark/
-¦   +-- bgp_processor.py      # BGP anomaly detection (Spark Structured Streaming)
-¦   +-- dns_processor.py      # DNS anomaly detection (Spark Structured Streaming)
-¦   +-- entrypoint.sh         # Launches both processors
-¦   +-- Dockerfile
+Â¦   +-- bgp_processor.py      # BGP anomaly detection (Spark Structured Streaming)
+Â¦   +-- dns_processor.py      # DNS anomaly detection (Spark Structured Streaming)
+Â¦   +-- entrypoint.sh         # Launches both processors
+Â¦   +-- Dockerfile
 +-- postgres/
-¦   +-- init.sql              # Schema: 5 tables auto-created on first run
+Â¦   +-- init.sql              # Schema: 5 tables auto-created on first run
 +-- grafana/
     +-- dashboards/
         +-- monitoring.json   # Pre-built dashboard (auto-provisioned)
